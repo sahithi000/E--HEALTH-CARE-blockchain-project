@@ -1,0 +1,92 @@
+/* Full-page container */
+.landing-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 100vh;           /* Full viewport height */
+  width: 100vw;            /* Full viewport width */
+  background: linear-gradient(135deg, #79aef3 0%, #c18ee5 100%,white 50%);
+  gap: 50px;               /* space between text and image */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Text section */
+.landing-content {
+  color: white;
+  max-width: 500px;
+  text-align: center; /* Center text */
+  animation: slideInTop 1s ease-out forwards;
+}
+
+/* Landing title */
+.landing-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Enter button */
+.landing-button {
+  font-size: 22px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #f9fafc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: bounce 2s infinite;
+}
+
+.landing-button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+/* Image section */
+.landing-image-container {
+  max-width: 500px;
+  animation: slideInRight 1s ease-out forwards;
+}
+
+.landing-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInTop {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

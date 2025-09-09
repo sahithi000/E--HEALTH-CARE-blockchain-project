@@ -1,0 +1,117 @@
+.upload-container {
+  background: white;
+  
+}
+
+.upload-container h4 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+}
+
+.upload-container input[type="file"] {
+  width: 73%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px dashed #3498db;
+  border-radius: 8px;
+  background: #f8fbff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.upload-container input[type="file"]:hover {
+  background: #e8f4ff;
+  border-color: #2980b9;
+  
+}
+
+.upload-container select {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.upload-container select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.upload-container button {
+  width: 80%;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.upload-container button:hover {
+  background: linear-gradient(45deg, #2980b9, #1c6ea4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.upload-container button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.upload-container p {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.upload-container p:not(:empty) {
+  background: #ecf0f1;
+  border-left: 4px solid #3498db;
+}
+
+/* Success message */
+.upload-container p:contains("Uploaded!") {
+  background: #d4edda;
+  border-left-color: #28a745;
+  color: #155724;
+}
+
+/* Error message */
+.upload-container p:contains("failed"),
+.upload-container p:contains("❌") {
+  background: #f8d7da;
+  border-left-color: #dc3545;
+  color: #721c24;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .upload-container {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .upload-container h4 {
+    font-size: 1.1rem;
+  }
+}

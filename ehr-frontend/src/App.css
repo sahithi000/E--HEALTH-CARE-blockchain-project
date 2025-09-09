@@ -1,0 +1,1043 @@
+/* General body styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #79aef3 0%, #c18ee5 100%,white 50%);
+  min-height: 100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login container */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Login forms */
+.login-form, .login-welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 10px rgba(79,172,254,0.4);
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #36d1dc, #5b86e5);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Dashboard containers */
+.patient-dashboard, .admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  animation: slideIn 0.7s ease-out;
+}
+
+
+
+/* Tables for insurance */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Headings */
+h2, h3 {
+  font-weight: 600;
+  color: #333;
+}
+
+/* List items */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #eef2f7;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Doctor Dashboard Styles */
+/* Doctor Dashboard Styles */
+.doctor-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dd {
+  color: #fbfcfd;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #9292f5;
+  padding-bottom: 5px;
+}
+
+.lg {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 0 !important;
+}
+
+.lg:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.pp {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Side by side layout */
+.doctor-dashboard-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.dupload {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #d386fc;
+  min-width: 400px;
+  flex: 1;
+}
+
+.dashboard {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #7ba0ef;
+  min-width: 400px;
+  flex: 1;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 12px;
+}
+
+.dashboard input{
+  width: 72%;
+  height: 30px;
+  
+}
+.dashboard select {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 80%;
+  height: 50px;
+}
+
+.dashboard input:focus,
+.dashboard select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.dashboard button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 80%;
+  height: 52px;
+}
+
+.dashboard button:hover {
+  background: linear-gradient(45deg, #219653, #1e8449);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.precords {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.precords h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.precords ul {
+  list-style: none;
+  padding: 0;
+}
+
+.precords li {
+  background: #f8f9fa;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #de8bf3;
+  transition: transform 0.2s ease;
+}
+
+.precords li:hover {
+  transform: translateX(5px);
+  background: #ecf0f1;
+}
+
+.precords a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.precords a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .doctor-dashboard-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dupload,
+  .dashboard {
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .dd {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* Status badges */
+.precords li:before {
+  content: "📄";
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+
+/* Loading state */
+.dashboard button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+/* patient dashboard */
+/* Patient Dashboard Layout */
+.patient-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #79aef3 0%, #c18ee5 100%,white 50%);
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.patient-dashboard h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
+  border-bottom: 3px solid #b676ee;
+  padding-bottom: 5px;
+}
+
+/* Control Buttons */
+.lb, .rb {
+    background: red;
+  color: white;
+  border: none;
+  
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+  
+  transition: all 0.3s ease;
+}
+
+.patient-dashboard > button:hover {
+  background: linear-gradient(45deg, #219653, #1e8449);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Filter Select */
+.patient-dashboard select {
+  padding: 10px ;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  width: 170px;
+  margin-right: 10px;
+  background: rgb(92, 90, 90);
+}
+
+.patient-dashboard select:focus {
+  outline: none;
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Two-column layout */
+.dashboard-content2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+.left-column h3{
+  margin-bottom: 0px;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.right-column {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+/* Request Policy Section - Right Side */
+.request-policy-section {
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background-color: white;
+  color: black;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-top: 50px;
+}
+
+.request-policy-section h3 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.request-policy-section input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid rgba(62, 61, 61, 0.3);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: black;
+  font-size: 1rem;
+}
+
+.request-policy-section input::placeholder {
+  color: black(255,255,255,0.7);
+}
+
+.request-policy-section input:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255,255,255,0.2);
+}
+
+.request-policy-section button {
+  width: 90%;
+  background: rgb(136, 177, 243);
+  color: white;
+  border: 5px black;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.request-policy-section button:hover {
+  
+  transform: translateY(-2px);
+}
+
+/* Left Column Sections */
+.records-section,
+.insurance-section,
+.pending-policies-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.records-section h3,
+.insurance-section h3,
+.pending-policies-section h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+/* Records List */
+.records-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.records-section li {
+  background: #f8f9fa;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.record-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.record-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.record-actions button:first-child {
+  background: #27ae60;
+  color: white;
+}
+
+.record-actions button.decline-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Insurance Table */
+.insurance-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.insurance-section th {
+  background: #34495e;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.insurance-section td {
+  padding: 12px;
+  border: 1px solid #ecf0f1;
+}
+
+.insurance-section tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.status-active {
+  color: #27ae60 !important;
+  font-weight: bold;
+}
+
+.status-expired {
+  color: #e74c3c !important;
+  font-weight: bold;
+}
+
+/* Pending Policies */
+.pending-policies-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pending-policies-section li {
+  padding: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.pending-policies-section li:last-child {
+  border-bottom: none;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 30px auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-content2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .right-column {
+    position: static;
+    order: -1; /* Move form to top on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-dashboard {
+    padding: 15px;
+  }
+  
+  .patient-dashboard > button {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .patient-dashboard select {
+    width: 100%;
+  }
+  
+  .record-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fbff;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.admin-dashboard h2 {
+  color: #2c3e50;
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 3px solid #e74c3c;
+  padding-bottom: 15px;
+}
+
+/* Two-column layout for admin sections */
+.admin-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+/* Common section styles */
+.pending-doctors-section,
+.pending-insurance-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.pending-doctors-section {
+  border-top: 5px solid #3498db;
+}
+
+.pending-insurance-section {
+  border-top: 5px solid #f39c12;
+}
+
+.pending-doctors-section h3,
+.pending-insurance-section h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+/* Load buttons */
+.pending-doctors-section > button,
+.pending-insurance-section > button {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.pending-insurance-section > button {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+}
+
+.pending-doctors-section > button:hover,
+.pending-insurance-section > button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.pending-doctors-section > button:hover {
+  background: linear-gradient(45deg, #2980b9, #1c6ea4);
+}
+
+.pending-insurance-section > button:hover {
+  background: linear-gradient(45deg, #e67e22, #d35400);
+}
+
+/* Lists */
+.pending-doctors-section ul,
+.pending-insurance-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pending-doctors-section li,
+.pending-insurance-section li {
+  background: #f8f9fa;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  text-align: left;
+}
+
+.pending-insurance-section li {
+  border-left-color: #f39c12;
+}
+
+.pending-doctors-section li br,
+.pending-insurance-section li br {
+  margin-bottom: 8px;
+  display: block;
+  content: "";
+}
+
+/* Approve buttons */
+.pending-doctors-section li button,
+.pending-insurance-section li button {
+  background: linear-gradient(45deg, #27ae60, #219653);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+}
+
+.pending-doctors-section li button:hover,
+.pending-insurance-section li button:hover {
+  background: linear-gradient(45deg, #219653, #1e8449);
+  transform: translateY(-1px);
+}
+
+/* No pending items message */
+.pending-doctors-section p,
+.pending-insurance-section p {
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Logout button */
+.admin-dashboard > button:last-child {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin: 30px auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.admin-dashboard > button:last-child:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .admin-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-dashboard {
+    padding: 20px;
+  }
+  
+  .admin-dashboard h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Loading states */
+.pending-doctors-section button:disabled,
+.pending-insurance-section button:disabled {
+  background: #bdc3c7 !important;
+  cursor: not-allowed;
+  transform: none !important;
+}
+.ab {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 15px ;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-top: 0 !important;
+  margin-left: 5px;
+}
+
+.ab:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+}
+
+/* Insurance Dashboard Styles */
+.insurance-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8fbff;
+  min-height: 100vh;
+  padding: 30px;
+  width: 500px;
+}
+
+.insurance-dashboard h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid #f39c12;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.insurance-dashboard h2 button {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: 0 !important;
+}
+
+.insurance-dashboard h2 button:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Registration Form Styles */
+.insurance-dashboard > p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.insurance-dashboard input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+}
+
+.insurance-dashboard input[type="text"]:focus {
+  outline: none;
+  border-color: #f39c12;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+.insurance-dashboard > button {
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 15px auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.insurance-dashboard > button:hover {
+  background: linear-gradient(45deg, #e67e22, #d35400);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Pending Policy Requests Section */
+.insurance-dashboard h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin: 30px 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ecf0f1;
+  text-align: center;
+}
+
+.insurance-dashboard > button {
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.insurance-dashboard > button:hover {
+  background: linear-gradient(45deg, #2980b9, #1c6ea4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Policy List */
+.insurance-dashboard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insurance-dashboard li {
+  background: #f8f9fa;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #f39c12;
+  transition: all 0.3s ease;
+}
+
+.insurance-dashboard li:hover {
+  background: #ecf0f1;
+  transform: translateY(-2px);
+}
+
+/* Action Buttons */
+.insurance-dashboard li button {
+  background: linear-gradient(45deg, #27ae60, #219653);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.insurance-dashboard li button:hover {
+  background: linear-gradient(45deg, #219653, #1e8449);
+  transform: translateY(-1px);
+}
+
+.insurance-dashboard li button:last-child {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+}
+
+.insurance-dashboard li button:last-child:hover {
+  background: linear-gradient(45deg, #c0392b, #a93226);
+}
+
+/* Status Text */
+.insurance-dashboard li span {
+  margin-left: 15px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.insurance-dashboard li span:contains("✅") {
+  color: #27ae60;
+  background: rgba(39, 174, 96, 0.1);
+}
+
+.insurance-dashboard li span:contains("❌") {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .insurance-dashboard {
+    padding: 20px;
+  }
+  
+  .insurance-dashboard h2 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .insurance-dashboard li {
+    padding: 15px;
+  }
+  
+  .insurance-dashboard li button {
+    display: block;
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+}
+
+/* Loading States */
+.insurance-dashboard button:disabled {
+  background: #bdc3c7 !important;
+  cursor: not-allowed;
+  transform: none !important;
+}
